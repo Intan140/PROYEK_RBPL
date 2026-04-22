@@ -147,7 +147,6 @@
                     </button>
                 </div>
 
-
                 <div class="bg-white rounded-lg p-4 status-card">
                     <div class="flex justify-between items-center mb-3">
                         <h2 class="label-text">Alamat Pengiriman</h2>
