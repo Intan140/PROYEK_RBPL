@@ -1,6 +1,8 @@
 <?php
 include '../sim_logistik/koneksi.php';
 
+//SPRINT 9 - MAINTENANCE TASK (PBI-043 & PBI-045)
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kirim_notif'])) {
     $pesan = mysqli_real_escape_string($koneksi, $_POST['pesan']);
 
@@ -17,14 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['kirim_notif'])) {
 
         if (strpos($error_msg, 'cannot be null') !== false || strpos($error_msg, 'foreign key constraint') !== false) {
             echo "<script>
-                alert('GAGAL MENGIRIM PESAN!\\n\\nSistem database masih menolak karena kolom [id_pelanggan] tidak boleh kosong.\\n\\nSOLUSI:\\n1. Buka phpMyAdmin -> Klik tabel [notifikasi]\\n2. Pilih tab [Structure/Struktur]\\n3. Klik tombol [Change/Ubah] pada baris id_pelanggan dan id_resi.\\n4. Centang kotak [Null] lalu Save.');
+                alert('GAGAL MENGIRIM PESAN!\\n\\nSistem database masih menolak karena kolom [id_pelanggan] tidak boleh kosong.\\n\\nSOLUSI MAINTENANCE:\\n1. Buka phpMyAdmin -> Klik tabel [notifikasi]\\n2. Pilih tab [Structure/Struktur]\\n3. Klik tombol [Change/Ubah] pada baris id_pelanggan dan id_resi.\\n4. Centang kotak [Null] lalu Save.');
              </script>";
         } else {
             echo "<script>alert('Gagal mengirim pesan: " . addslashes($error_msg) . "');</script>";
         }
     }
 }
-
 
 $query_notif = "SELECT * FROM notifikasi ORDER BY waktu_kirim DESC LIMIT 10";
 $result_notif = mysqli_query($koneksi, $query_notif);
@@ -160,7 +161,6 @@ $result_notif = mysqli_query($koneksi, $query_notif);
                 <?php
                 if ($result_notif && mysqli_num_rows($result_notif) > 0) {
                     while ($row = mysqli_fetch_assoc($result_notif)) {
-
                         $waktu = date('g:i A', strtotime($row['waktu_kirim']));
                         $tanggal = date('d M', strtotime($row['waktu_kirim']));
                 ?>
