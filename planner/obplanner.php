@@ -57,7 +57,7 @@
         </div>
 
         <div class="p-8 pb-10 flex gap-3">
-            <button onclick="window.location.href='../sim_logistik/onboarding.php'" class="flex-1 bg-white border-2 border-[#ee4d2d] text-[#ee4d2d] py-4 rounded-xl font-bold text-lg active:scale-95 transition-all text-center">
+            <button onclick="window.location.href='../onboarding.php'" class="flex-1 bg-white border-2 border-[#ee4d2d] text-[#ee4d2d] py-4 rounded-xl font-bold text-lg active:scale-95 transition-all text-center">
                 Kembali
             </button>
             <button onclick="window.location.href='daftar_armada.php'" class="flex-1 shopee-bg text-white py-4 rounded-xl font-bold text-lg shadow-[0_10px_20px_-10px_rgba(238,77,45,0.6)] active:scale-95 transition-all text-center">
