@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '..koneksi.php';
 
 $q_tiba = mysqli_query($koneksi, "SELECT COUNT(*) as total FROM pesanan WHERE status = 'Tiba di Hub Tujuan'");
 $tot_tiba = mysqli_fetch_assoc($q_tiba)['total'];
