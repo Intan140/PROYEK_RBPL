@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 if (!isset($_GET['resi']) || empty($_GET['resi'])) {
     header("Location: index.php");
