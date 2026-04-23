@@ -1,6 +1,6 @@
 <?php
 // Memanggil koneksi dari folder sim_logistik
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $data_paket = null;
 $error_msg = "";
