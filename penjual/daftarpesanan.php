@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $id_pengirim = 1;
 
@@ -81,7 +81,6 @@ $jumlah_pesanan = mysqli_num_rows($query);
                 <h1 class="text-lg font-medium poppins">Toko Saya</h1>
             </div>
             <div class="flex gap-4 items-center">
-
                 <a href="formdetailproduk.php" class="bg-white/20 px-2 py-1 rounded text-sm font-bold flex items-center gap-1 active:bg-white/30">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -137,10 +136,17 @@ $jumlah_pesanan = mysqli_num_rows($query);
 
                         <div class="mt-4 flex justify-end gap-2 border-t border-gray-50 pt-3">
                             <span class="text-[11px] text-gray-400 font-medium mr-auto mt-2">Qty: <?= htmlspecialchars($row['jumlah']) ?></span>
-                            <a href="formdetailproduk.php?id=<?= $row['id_pesanan'] ?>" class="border border-gray-300 text-gray-600 px-5 py-1.5 rounded-sm text-[13px] font-medium active:bg-gray-50">
+
+                            <?php if ($status == 'Menunggu Pickup'): ?>
+                                <a href="edit_pesanan.php?id=<?= $row['id_pesanan'] ?>" class="border border-orange-500 text-[#ee4d2d] px-4 py-1.5 rounded-sm text-[13px] font-bold active:bg-orange-50 transition-colors">
+                                    Ubah
+                                </a>
+                            <?php endif; ?>
+
+                            <a href="formdetailproduk.php?id=<?= $row['id_pesanan'] ?>" class="border border-gray-300 text-gray-600 px-4 py-1.5 rounded-sm text-[13px] font-medium active:bg-gray-50">
                                 Detail
                             </a>
-                            <button class="shopee-bg text-white px-5 py-1.5 rounded-sm text-[13px] font-medium active:opacity-80 shadow-sm">
+                            <button class="shopee-bg text-white px-4 py-1.5 rounded-sm text-[13px] font-medium active:opacity-80 shadow-sm">
                                 Lacak
                             </button>
                         </div>
