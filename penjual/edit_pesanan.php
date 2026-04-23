@@ -1,12 +1,11 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 /**
  * SPRINT 9 - TASK (PBI-042)
  * Fitur: Edit Data Pesanan oleh User (Penjual)
  */
 
-// 1. Ambil data pesanan yang akan diedit
 if (isset($_GET['id'])) {
     $id_pesanan = mysqli_real_escape_string($koneksi, $_GET['id']);
     $query = mysqli_query($koneksi, "SELECT p.*, pel.nama as nama_penerima, pel.alamat as alamat_penerima 
@@ -15,7 +14,6 @@ if (isset($_GET['id'])) {
                                    WHERE p.id_pesanan = '$id_pesanan'");
     $data = mysqli_fetch_assoc($query);
 
-    // Cek jika pesanan sudah diproses, tidak boleh diedit
     if ($data['status'] !== 'Menunggu Pickup') {
         echo "<script>alert('Pesanan yang sudah diproses tidak dapat diubah!'); window.location.href='daftarpesanan.php';</script>";
         exit;
