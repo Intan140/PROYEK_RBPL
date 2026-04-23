@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 //SPRINT 9 - MAINTENANCE TASK (PBI-044)
 
