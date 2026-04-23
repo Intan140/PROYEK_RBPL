@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     $id_jadwal = mysqli_real_escape_string($koneksi, $_POST['id_jadwal']);
