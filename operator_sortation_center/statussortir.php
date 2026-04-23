@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $query = "SELECT * FROM pesanan ORDER BY id_pesanan DESC";
 $result = mysqli_query($koneksi, $query);
