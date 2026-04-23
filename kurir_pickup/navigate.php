@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $resi = isset($_GET['resi']) ? mysqli_real_escape_string($koneksi, $_GET['resi']) : '';
 
