@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['assign_kurir'])) {
     if (!empty($_POST['paket_terpilih']) && !empty($_POST['id_kurir'])) {
