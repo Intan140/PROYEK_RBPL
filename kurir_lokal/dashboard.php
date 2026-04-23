@@ -1,5 +1,5 @@
 <?php
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $query = "SELECT * FROM pesanan WHERE status = 'Out for Delivery' ORDER BY alamat ASC";
 $result = mysqli_query($koneksi, $query);
