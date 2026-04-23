@@ -1,10 +1,7 @@
 <?php
 include '../koneksi.php';
 
-/**
- * SPRINT 9 - TASK (PBI-042)
- * Fitur: Edit Data Pesanan oleh User (Penjual)
- */
+//SPRINT 9 - TASK (PBI-042)
 
 if (isset($_GET['id'])) {
     $id_pesanan = mysqli_real_escape_string($koneksi, $_GET['id']);
