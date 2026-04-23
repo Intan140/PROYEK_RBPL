@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-include '../sim_logistik/koneksi.php';
+include '../koneksi.php';
 
 $id_resi = isset($_GET['id_resi']) ? mysqli_real_escape_string($koneksi, $_GET['id_resi']) : '';
 
