@@ -212,7 +212,7 @@
 
     <script>
         const statusData = [{
-                val: 1,
+                val: 4,
                 label: 'Perlu Dikirim'
             },
             {
