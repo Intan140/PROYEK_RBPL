@@ -84,7 +84,7 @@ $total_tugas = mysqli_num_rows($result);
 
             <div class="px-6 pt-6 flex items-center justify-between">
                 <div class="flex items-center gap-4">
-                    <a href="../sim_logistik/onboarding.php" class="bg-white/15 hover:bg-white/25 p-2.5 rounded-xl backdrop-blur-md transition-all border border-white/10">
+                    <a href="../onboarding.php" class="bg-white/15 hover:bg-white/25 p-2.5 rounded-xl backdrop-blur-md transition-all border border-white/10">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
                         </svg>
