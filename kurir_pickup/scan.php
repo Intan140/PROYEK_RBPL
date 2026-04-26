@@ -189,13 +189,13 @@
                         badge.classList.remove('hidden');
                     } else {
                         resetUI();
-                        alert("❌ Resi tidak ditemukan atau sudah diproses.");
+                        alert("Resi tidak ditemukan atau sudah diproses.");
                     }
                 })
                 .catch(err => {
                     resetUI();
                     console.error("Debug Info:", err);
-                    alert("⚠️ Masalah Koneksi:\n" + err.message + "\n\nSolusi:\n1. Pastikan file 'ambil_data.php' ada di folder kurir_pickup.\n2. Nyalakan Apache di XAMPP.");
+                    alert("⚠Masalah Koneksi:\n" + err.message + "\n\nSolusi:\n1. Pastikan file 'ambil_data.php' ada di folder kurir_pickup.\n2. Nyalakan Apache di XAMPP.");
                 });
         }
 
@@ -232,10 +232,10 @@
                 })
                 .then(res => {
                     if (res.trim() === "berhasil") {
-                        alert("✅ Berhasil! Paket telah diterima kurir.");
+                        alert("Berhasil! Paket telah diterima kurir.");
                         window.location.href = 'listpengantaran.php';
                     } else {
-                        alert("⚠️ Pesan Server: " + res);
+                        alert("⚠Pesan Server: " + res);
                         this.innerText = "PICK UP PAKET";
                         this.disabled = false;
                     }
